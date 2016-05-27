@@ -64,6 +64,16 @@ angular.module('app.routes',[])
       }
     })
 
+    .state('menu.produitInfo', {
+      url: "/produits/:produitId",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/produitInfo.html",
+         
+        }
+      }
+    })
+
     .state('menu.envoyerMessage', {
       url: "/envoyerMessage",
       views: {
