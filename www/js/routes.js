@@ -46,7 +46,7 @@ angular.module('app.routes',[])
       }
     })
 
-    //MEnu
+    //////////////////////////////MEnu
 
     .state('menu', {
       url: "/menu",
@@ -69,7 +69,7 @@ angular.module('app.routes',[])
       views: {
         'menuContent': {
           templateUrl: "templates/produitInfo.html",
-         
+
         }
       }
     })
@@ -84,6 +84,7 @@ angular.module('app.routes',[])
     })
     .state('menu.mesRemises', {
       url: "/mesRemises",
+      
       views: {
         'menuContent': {
           templateUrl: "templates/mesRemises.html"
@@ -102,6 +103,27 @@ angular.module('app.routes',[])
       }
     })
 
+/////////////MesRemises
+
+    .state('menu.mesRemises.mesRemisesEncours', {
+      url: "/mesRemisesEncours",
+      views: {
+        'mesRemisesEncours': {
+          templateUrl: "templates/mesRemisesEncours.html"
+
+        }
+      }
+    })
+
+    .state('menu.mesRemises.mesRemisesHistorique', {
+      url: "/mesRemisesHistorique",
+      views: {
+        'mesRemisesHistorique': {
+          templateUrl: "templates/mesRemisesHistorique.html"
+
+        }
+      }
+    })
 
 
 
