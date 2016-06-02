@@ -5,14 +5,15 @@ angular.module('app.routes',[])
 
   $stateProvider
 
-     .state('index', { url: '/', templateUrl: 'index.html'})
+    .state('index', { url: '/', templateUrl: 'index.html'})
 
-      .state('login', { url: '/login', templateUrl: 'templates/login.html', controller: 'loginCtrl'})
+    .state('login', { url: '/login', templateUrl: 'templates/login.html', controller: 'loginCtrl'})
 
-      // abstract cet objet state tab n a pas de view..et pour loading before other tab..
+    // abstract cet objet state tab n a pas de view..et pour loading before other tab..
     .state('tab', {
       url: "/tab",
       abstract: true,
+
       templateUrl: "templates/tabs.html"
     })
 
@@ -48,64 +49,44 @@ angular.module('app.routes',[])
 
     //////////////////////////////MEnu
 
-    .state('menu', {
-      url: "/menu",
-      abstract: true,
-      templateUrl: "templates/menu.html",
-      controller: 'menuCtrl'
-    })
 
-    .state('menu.produits', {
+    .state('produits', {
       url: "/produits",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/produits.html"
-        }
-      }
+      templateUrl: "templates/produits.html"
+
+
     })
 
-    .state('menu.produitInfo', {
+    .state('produitInfo', {
       url: "/produits/:produitId",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/produitInfo.html",
 
-        }
-      }
+      templateUrl: "templates/produitInfo.html",
+
     })
 
-    .state('menu.envoyerMessage', {
+    .state('envoyerMessage', {
       url: "/envoyerMessage",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/envoyerMessage.html"
-        }
-      }
+
+      templateUrl: "templates/envoyerMessage.html"
+
     })
-    .state('menu.mesRemises', {
+    .state('mesRemises', {
       url: "/mesRemises",
-      
-      views: {
-        'menuContent': {
-          templateUrl: "templates/mesRemises.html"
 
-        }
-      }
+      templateUrl: "templates/mesRemises.html"
+
     })
 
-    .state('menu.mesCotations', {
+    .state('mesCotations', {
       url: "/mesCotations",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/mesCotations.html"
 
-        }
-      }
+      templateUrl: "templates/mesCotations.html"
+
     })
 
-/////////////MesRemises
+    /////////////MesRemises
 
-    .state('menu.mesRemises.mesRemisesEncours', {
+    .state('mesRemises.mesRemisesEncours', {
       url: "/mesRemisesEncours",
       views: {
         'mesRemisesEncours': {
@@ -115,7 +96,7 @@ angular.module('app.routes',[])
       }
     })
 
-    .state('menu.mesRemises.mesRemisesHistorique', {
+    .state('mesRemises.mesRemisesHistorique', {
       url: "/mesRemisesHistorique",
       views: {
         'mesRemisesHistorique': {
@@ -130,6 +111,6 @@ angular.module('app.routes',[])
   ;
 
 
-$urlRouterProvider.otherwise('/login')
+  $urlRouterProvider.otherwise('/login')
 
 });

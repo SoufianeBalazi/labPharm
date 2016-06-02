@@ -19,10 +19,7 @@ angular.module('app.controllers', [])
   .controller('gridFacturesNonPayeesCtrl', function($scope) {
 
   })
-//controllers Menu
-  .controller('menuCtrl', function($scope) {
 
-  })
 
   .controller('gridFacturesNonPayeesCtrl', function($scope) {
 
